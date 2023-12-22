@@ -1,9 +1,13 @@
 import joblib
 import streamlit as st
 
-import os
+# Cek versi Joblib
+print(f'Versi Joblib: {joblib.__version__}')
 
-model_path = os.path.join('ILDAT', 'diabetes_predict.sav')
+# Path model
+model_path = 'D:/ILDAT/diabetes_predict.sav'
+
+# Load model
 diabetes_model = joblib.load(open(model_path, 'rb'))
 
 
